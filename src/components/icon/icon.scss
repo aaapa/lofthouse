@@ -1,0 +1,94 @@
+.icon {
+  $size: ptrm(40);
+  @include square($size);
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    mask-position: center center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+  }
+
+  &.mouse {
+    &::before {
+      background-color: $accent-color;
+      mask-image: url("icons/mouse.svg");
+    }
+  }
+
+  &.gps {
+    @include square(ptrm(20));
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/gps.svg");     
+    }
+  }
+
+  &.phone {
+    @include square(ptrm(20));
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/phone.svg");     
+    }
+  }
+
+  &.youtube {
+    width: ptrm(30);
+    height: ptrm(20);
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/socials/youtube.svg");     
+    }
+  }
+
+  &.vk {
+    width: ptrm(40);
+    height: ptrm(20);
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/socials/vk.svg");     
+    }
+  }
+
+  &.facebook {
+    @include square(ptrm(20));
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/socials/facebook.svg");     
+    }
+  }
+
+  &.instagram {
+    width: ptrm(30);
+    height: ptrm(25);
+
+    &::before {
+      background-color: white;
+      mask-image: url("icons/socials/instagram.svg");     
+    }
+  }
+
+  &.play {
+    @include square(ptrm(100));
+
+    &::before {
+      background-color: $accent-color;
+      mask-image: url("icons/play.svg");     
+    }
+  }
+}

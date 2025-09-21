@@ -1,0 +1,27 @@
+html,
+body {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-family: sans-serif;
+  background-color: #242B33;
+}
+
+.container {
+  width: 100%; 
+  max-width: $container-width;
+  padding-inline: $container-padding;
+  margin-inline: auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.tippy {
+  &-arrow {
+    transition: none !important;
+  }
+}

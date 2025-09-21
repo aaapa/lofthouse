@@ -1,0 +1,40 @@
+.preview {
+  width: 100%;
+  padding-block: ptrm(180);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    padding-block: ptrm(60);
+  }
+
+  & * {
+    z-index: 2;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  
+    &::before {
+      content: "IV";
+      color: #282F37;
+      font-size: ptrm(400);
+      font-weight: 700;
+      font-family: "PlayfairDisplay-Bold";
+      position: absolute;
+      top: ptrm(50);
+      right: ptrm(-200);
+      z-index: 1;
+
+      @media (width <= ptrm(1300)) {
+        display: none;
+      }
+    }
+  }
+}

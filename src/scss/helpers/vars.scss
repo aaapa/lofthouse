@@ -1,0 +1,11 @@
+@use "functions" as *;
+@use "media" as *;
+
+$opacity: 0.5;
+$scale: 0.9;
+
+$yellow-color: #D4C17F;
+$accent-color: $yellow-color;
+
+$container-width: ptrm(1110);
+$container-padding: ptrm(15);

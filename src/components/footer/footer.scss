@@ -1,0 +1,123 @@
+.footer {
+  width: 100%;
+  padding-block: ptrm(55) ptrm(50);
+  background-color: #2D343C;
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: ptrm(30);
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: start;
+  }
+
+  &__links {
+    display: flex;
+    gap: ptrm(80);
+    align-items: start;
+
+    @include mobile {
+      gap: ptrm(30);
+      flex-direction: column;
+    }
+
+    &-row {
+      display: flex;
+      gap: ptrm(60);
+      align-items: start;
+
+      @include mobile {
+        gap: ptrm(30);
+        flex-direction: column;
+      }
+    }
+
+    &-column {
+      display: flex;
+      gap: ptrm(20);
+      flex-direction: column;
+    }
+
+    &-text {
+      font-style: normal;
+      font-family: "Raleway-Regular";
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    display: flex;
+    gap: ptrm(15);
+    flex-direction: column;
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: "Raleway-Regular";
+    @include trns;
+
+    &.email {
+      color: $accent-color;
+      font-family: "Raleway-Bold";
+      font-weight: 700;
+
+      @include hover {
+        color: #A99B6C;
+      }
+    }
+
+    @include hover {
+      color: $accent-color;
+    }
+
+    &:active {
+      scale: $scale;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    &-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    &-list {
+      display: flex;
+      gap: ptrm(20);
+      align-items: center;
+    }
+
+    &-link {
+      display: inline-block;
+      @include trns;
+
+      &:active {
+        scale: $scale;
+      }
+    }
+
+    &-link {
+      @include hover {
+        .footer__socials-link-icon::before {
+          background-color: $accent-color;
+        }
+      }
+    }
+  }
+}

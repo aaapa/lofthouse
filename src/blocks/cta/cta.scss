@@ -1,0 +1,77 @@
+.cta {
+  width: 100%;
+  min-height: ptrm(560);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  & * {
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: ptrm(0);
+    left: ptrm(0);
+    z-index: 1;
+    background: 
+      linear-gradient(180deg, #242B33 10%, rgba(36, 43, 51, 0) 50%, #242B33 90%),
+      linear-gradient(0deg, rgba(36, 43, 51, 0.9) 0%, rgba(36, 43, 51, 0.9) 100%),
+      url("imgs/cta/cta.webp") no-repeat 50% / cover lightgray;
+  }
+
+  &__inner {
+    display: flex;
+    gap: ptrm(30);
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: ptrm(20);
+    flex-direction: column;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    &-text {
+      max-width: ptrm(540);
+      font-family: "Raleway-Regular";
+      line-height: 150%;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: ptrm(30);
+    grid-template-columns: repeat(2, ptrm(255));
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+      text-align: center;
+      font-size: ptrm(13);
+      font-family: "Raleway-Regular";
+      line-height: 125%;
+    }
+  }
+}

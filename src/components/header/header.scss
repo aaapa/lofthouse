@@ -1,0 +1,168 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100 !important;
+
+  &.scroll {
+    min-height: ptrm(85);
+    position: fixed;
+    top: ptrm(0);
+    left: ptrm(0);
+    background-color: #242B33;
+    @include trns;
+  }
+
+  &__placeholder {
+    height: ptrm(65);
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &.scroll {
+    .header__inner {
+      width: 100%; 
+      max-width: $container-width;
+      padding-inline: $container-padding;
+      margin-inline: auto;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding: ptrm(15);
+      position: fixed;
+      top: ptrm(0);
+      left: -100%;
+      overflow: hidden auto;
+      justify-content: center;
+      background-color: #242B33F4;
+      transition: all 0.50s ease-in-out 0s;
+
+      &.open {
+        left: 0%;
+      }
+    }
+
+    &-inner {
+      width: 100%;
+      margin: auto;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include trns;
+
+      &:active {
+        scale: $scale;
+      }
+    }
+
+    &-icon {
+      width: ptrm(40);
+      height: ptrm(20);
+      position: relative;
+
+      &-line {
+        width: 100%;
+        height: ptrm(2);
+        display: inline-block;
+        position: absolute;
+        left: ptrm(0);
+        background-color: white;
+        @include trns;
+
+        &:first-child {
+          top: ptrm(0);
+        }
+
+        &:nth-child(2) {
+          top: ptrm(9);
+        }
+
+        &:last-child {
+          bottom: ptrm(0);
+        }
+      }
+
+      &.open {
+        .header__menu-icon-line:first-child {
+          rotate: -45deg;
+          top: ptrm(10);
+        }
+
+        .header__menu-icon-line:nth-child(2) {
+          scale: 0;
+        }
+
+        .header__menu-icon-line:last-child {
+          rotate: 45deg;
+          bottom: ptrm(8);
+        }
+      }
+    }
+
+    &-button {
+      @include hover {
+        .header__menu-icon-line {
+          background-color: #919090;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: ptrm(40);
+    align-items: center;
+
+    @include mobile {
+      gap: ptrm(20);
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: ptrm(14);
+    font-family: "Raleway-Regular";
+    @include trns;
+
+    @include hover {
+      color: #919090;
+    }
+
+    &:active {
+      scale: $scale;
+    }
+    
+    @include mobile {
+      font-size: ptrm(20);
+    }
+  }
+}

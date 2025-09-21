@@ -1,0 +1,13 @@
+.title {
+  color: $accent-color;
+  font-weight: 700;
+  font-family: "PlayfairDisplay-Bold";
+
+  &.big {
+    @include fluid-text(48, 24);
+  }
+
+  &.normal {
+    @include fluid-text(36, 20);
+  }
+}

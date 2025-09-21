@@ -1,0 +1,46 @@
+$inputHeight: ptrm(50);
+
+.input-wrapper {
+  min-height: $inputHeight;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: $inputHeight;
+  padding-inline: ptrm(15);
+  text-align: center;
+  font-family: "Raleway-Regular";
+  background-color: #5E646A;
+  @include trns;
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: ptrm(0);
+    left: ptrm(0);
+    pointer-events: none;
+    font-family: "Raleway-Regular";
+    transition: all 0.6s;
+  }
+
+  &:not(:placeholder-shown) + &__placeholder,
+  &:focus-visible + &__placeholder,
+  &:-webkit-autofill + &__placeholder {
+    height: auto;
+    align-items: start;
+    transform: translateY(ptrm(-30));
+  }
+
+  @include hover {
+    &:not(:focus-visible) {
+      + .input__placeholder {
+        color: $accent-color;
+      }
+    }
+  }
+}
