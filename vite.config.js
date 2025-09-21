@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
-  base: '/',
+  base: '/lofthouse',
   plugins: [injectHTML()],
   resolve: {
     alias: [{ find: '@/', replacement: resolve('src') + '/'}],
