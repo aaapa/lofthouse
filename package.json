@@ -1,12 +1,14 @@
 {
   "name": "lofthouse",
-  "private": true,
+  "homepage": "https://aaapa.github.io/lofthouse/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node postbuild.cjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
@@ -15,6 +17,7 @@
     "vite": "^4.4.7"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "tippy.js": "^6.3.7",
     "vite-plugin-html-inject": "^1.1.2"
   }
