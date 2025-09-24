@@ -1,29 +1,14 @@
 .about {
-  $min-height: ptrm(840);
-
   width: 100%;
-  min-height: $min-height;
+  min-height: ptrm(840);
   position: relative;
 
-  & * {
-    z-index: 2;
-  }
- 
-  &__inner {
-    width: 100%;
-    min-height: $min-height;
-    padding-block: ptrm(30) ptrm(75);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @include mobile {
-      padding-block-end: ptrm(60);
-    }
+  @include mobile {
+    min-height: ptrm(600);
   }
 
-  &__background {
+  &::before {
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -33,6 +18,25 @@
     display: inline-block;
     pointer-events: none;
     background: linear-gradient(180deg, #242B33 11%, rgba(45, 52, 60, 0.38) 51%, #242B33 92%), url("imgs/about/about.webp") lightgray 50% / cover no-repeat;
+  }
+
+  & * {
+    z-index: 2;
+  }
+ 
+  &__inner {
+    width: 100%;
+    min-height: ptrm(840);
+    padding-block: ptrm(30) ptrm(75);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+      min-height: ptrm(600);
+      padding-block: ptrm(20) ptrm(60);
+    }
   }
 
   &__main {

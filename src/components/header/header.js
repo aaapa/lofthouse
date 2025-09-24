@@ -17,7 +17,7 @@ class Header {
   }
 
   media = {
-    mobile: 61.9988, // 61.9988em - 991.98px
+    mobile: 61.9988, // 61.9988rem - 991.98px
   }
 
   constructor() {
