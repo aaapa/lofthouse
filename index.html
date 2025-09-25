@@ -2,6 +2,7 @@
 <html lang="ru">
  <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAFNUExURQAAADlCQDk8QDlUQDk9QDlCQTlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQEJKRUFJRTlCQEZOSLKsiK2ohURMR7Ouia6phbSuia+phq+qhkdOSK+qhkVMRzpCQLSviTlBQEBIRLCrh6ynhDlCQFBWTePYpeTZpuLXpDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQDlCQObapuPXpWZpWk9WTWVoWuXZpk5VTeLXpFBWTuPYpU1UTM/Gmc/GmU5UTE1TTNDHmVJYT1FYTjlCQDlCQDlCQDlCQDhBQDhBPzdBP/rss/nrsvrrsvrssjhCQPvss1FXTuPYpVJYT/bpsObapuPXpVBWTTY/PvzutOTZpvzttOXZpjxEQv///2ImDZ0AAABXdFJOUwAAAAAAAAFu7etoZ/Bg8e9h8v7+af78/f78/fz9/f78/gH8Af78/AL+/v7+Zufo9/r7+eBazNF64n7QxlMUHhMQH/7+/v79/v79/v3+/f7+/v7+/uHNY+dfijsAAAABYktHRG4iD1EXAAAAB3RJTUUH6QkZCwskDjxIdQAAAVlJREFUOMud0VdXwjAchvHERUFwD1y4UKlbceAABERwK+tPmiqgqKDy/W9NGG3pSbnwvco5z+/0tClC+jDus0l2RxfGSDjW+50AkqtbLFh3DADb4JBQ8D4MkM9biGYnI6NEKFgfY10Zn5h0i4TWp6g6LRBan3lRVXXWrZiE3l9VvjmTMHezaHWP1lV1fkEXGC/yTjxLeudCe1O8zHvBu0JV41a9hYZAa/x+gPjkorEX10sKv3VXD7I5oQ422p5A3945AGkTSdAJwBbaBtjZFYO9fQA/Ojg8Og6IQeDk9Owc4WAw5BcDfyh8wT4T44gViOD6XRoBZTOCxr/QQTkai0XL1oB+XMbjVwlqDT6/KpXkdSdQUkj8n+BGrlJa/WbAd8tOP79mcHefkOXEwyMhT/XTc5K0AaglU+l0KlkznnSQ4f9TYSNgPGVaIJwF4bLhJsA5u6jbc70M/AG+ydefQA/2IQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNS0wOS0yNVQxMToxMTozMSswMDowMHEewWQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjUtMDktMjVUMTE6MTE6MzErMDA6MDAAQ3nYAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI1LTA5LTI1VDExOjExOjM2KzAwOjAwkvFmiQAAAABJRU5ErkJggg==">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LoftHouse</title>
    
@@ -17,7 +18,7 @@
    <img class="logo__image" src="imgs/logo/logo.png" alt="LoftHouse">
    <span class="visually-hidden">На главную</span>
   </a>
-  <div class="header__menu" data-js-header-menu>
+  <div class="header__menu" id="header-menu" data-js-header-menu>
    <div class="header__menu-inner">
     <nav class="header__nav">
      <ul class="header__list">
@@ -40,7 +41,7 @@
     </nav>
    </div>
   </div>
-  <button class="header__menu-button visible-mobile" data-js-header-menu-button>
+  <button class="header__menu-button visible-mobile" aria-expanded="false" aria-controls="header-menu" aria-haspopup="menu" data-js-header-menu-button>
    <span class="header__menu-icon" data-js-header-menu-icon>
     <span class="header__menu-icon-line"></span>
     <span class="header__menu-icon-line"></span>
@@ -158,9 +159,9 @@
 </section>
  <section class="preview">
  <div class="preview__inner container">
+  <h2 class="visually-hidden">Видео о компании LoftHouse</h2>
   <div class="custom-video">
    <div class="custom-video__content">
-    <h2 class="visually-hidden">Видео о компании LoftHouse</h2>
     <img class="custom-video__preview" src="imgs/preview/preview.webp" alt="">
     <div class="custom-video__controls">
      <button class="custom-video__button play" data-tippy-content="Включить видео">
