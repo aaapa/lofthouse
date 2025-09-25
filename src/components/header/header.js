@@ -14,6 +14,7 @@ class Header {
 
   attrs = {
     inert: 'inert',
+    ariaExpanded: 'aria-expanded',
   }
 
   media = {
@@ -28,6 +29,8 @@ class Header {
     this.menuIconElement = document.querySelector(this.selectors.menuIcon);
 
     this.mobileMediaQuery = window.matchMedia(`(width <= ${this.media.mobile}rem)`);
+
+    this.menuIsExpanded = false;
 
     this.bindEvents();
     this.adaptiveMenu();
@@ -52,9 +55,17 @@ class Header {
     };
   };
 
+  menuButtonToggleAttr = () => {
+    if (this.menuIsExpanded === false) {
+      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'true');
+      this.menuIsExpanded = true;
+    } else if (this.menuIsExpanded === true) {
+      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'false');
+      this.menuIsExpanded = false;
+    };
+  };
+
   fixedHeader = () => {
-
-
     const parentContainer = this.headerElement.parentElement;
 
     const existingPlaceholder = parentContainer.querySelector('.header__placeholder');
@@ -79,6 +90,7 @@ class Header {
 
   bindEvents() {
     this.menuButtonElement.addEventListener('click', this.onMenuButtonClick);
+    this.menuButtonElement.addEventListener('click', this.menuButtonToggleAttr);
     this.mobileMediaQuery.addEventListener('change', this.adaptiveMenu);
     window.addEventListener('scroll', () => this.fixedHeader());
   };
