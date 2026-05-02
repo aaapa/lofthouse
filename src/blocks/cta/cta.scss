@@ -56,7 +56,6 @@
 
     &-text {
       max-width: ptrm(540);
-      font-family: "Raleway-Regular";
       line-height: 150%;
 
       @include mobile {
@@ -78,7 +77,6 @@
 
     &-text {
       text-align: center;
-      font-family: "Raleway-Regular";
       line-height: 125%;
     }
   }

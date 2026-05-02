@@ -64,6 +64,7 @@
     flex-direction: column;
     justify-content: end;
     position: relative;
+    isolation: isolate;
     @include trns;
 
     &:active {
@@ -83,14 +84,9 @@
       position: absolute;
       top: ptrm(0);
       left: ptrm(0);
-      z-index: 2;
+      z-index: -1;
       background:
         linear-gradient(180deg, rgba(36, 43, 51, 0.00) 0%, #242B33 100%)
-    }
-
-    & * {
-      position: relative;
-      z-index: 2;
     }
 
     &-image {
@@ -100,13 +96,12 @@
       position: absolute;
       top: ptrm(0);
       left: ptrm(0);
-      z-index: 1;
+      z-index: -2;
     }
 
     &-title {
       display: inline-block;
       @include fluid-text(24, 18);
-      font-family: "Raleway-Regular";
       @include trns;
     }
 

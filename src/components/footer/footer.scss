@@ -50,7 +50,6 @@
 
     &-text {
       font-style: normal;
-      font-family: "Raleway-Regular";
     }
   }
 
@@ -67,7 +66,6 @@
 
   &__link {
     display: inline-block;
-    font-family: "Raleway-Regular";
     @include trns;
 
     &.email {

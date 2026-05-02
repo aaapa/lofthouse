@@ -25,10 +25,10 @@ class Header {
   constructor() {
     this.rootElement = document.documentElement;
     this.headerElement = document.querySelector(this.selectors.header);
-    this.menuElement = document.querySelector(this.selectors.menu);
-    this.menuButtonElement = document.querySelector(this.selectors.menuButton);
-    this.menuIconElement = document.querySelector(this.selectors.menuIcon);
-    this.menuButtonTextElement = document.querySelector(this.selectors.menuButtonText);
+    this.menuElement = this.headerElement.querySelector(this.selectors.menu);
+    this.menuButtonElement = this.headerElement.querySelector(this.selectors.menuButton);
+    this.menuIconElement = this.headerElement.querySelector(this.selectors.menuIcon);
+    this.menuButtonTextElement = this.headerElement.querySelector(this.selectors.menuButtonText);
 
     this.mobileMediaQuery = window.matchMedia(`(width <= ${this.media.mobile}rem)`);
 
@@ -92,26 +92,7 @@ class Header {
   };
 
   fixedHeader = () => {
-    const parentContainer = this.headerElement.parentElement;
-
-    const existingPlaceholder = parentContainer.querySelector('.header__placeholder');
-
-    if (window.scrollY > 10) {
-      this.headerElement.classList.add(this.stateClasses.scroll);
-
-      if (!existingPlaceholder) {
-        const placeholderElement = document.createElement('div');
-        placeholderElement.className = 'header__placeholder';
-
-        parentContainer.insertAdjacentElement('afterbegin', placeholderElement);
-      };
-
-    } else {
-      this.headerElement.classList.remove(this.stateClasses.scroll);
-      if (existingPlaceholder) {
-        existingPlaceholder.remove();
-      }
-    };
+    this.headerElement.classList.toggle(this.stateClasses.scroll, window.scrollY > 10);
   };
 
   bindEvents() {
@@ -133,6 +114,7 @@ class Header {
     window.addEventListener('scroll', () => this.fixedHeader());
   };
 };
+
 if (document.querySelector('.header') &&
    document.querySelector('.header__menu') && 
    document.querySelector('.header__menu-button') && 
