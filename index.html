@@ -25,7 +25,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/lofthouse/favicons/apple-touch-icon.png"/>
   <meta name="apple-mobile-web-app-title" content="LoftHouse"/>
   <link rel="manifest" href="/lofthouse/site.webmanifest"/>
-  <link rel="preload" as="image" href="imgs/about/about.webp" fetchpriority="high">
   <title>LoftHouse | Главная</title>
    
    <link rel="stylesheet" crossorigin href="main.css">
@@ -81,7 +80,10 @@
   </button>
  </div>
 </header>
-  <img class="about__background" src="imgs/about/about.webp" width="1920" height="840" fetchpriority="high" alt="">
+  <picture>
+   <source media="(width <= 47.9988rem)" srcset="imgs/about/about-background-mobile.webp">
+   <img class="about__background" src="imgs/about/about-background.webp" width="1920" height="840" fetchpriority="high" decoding="async" alt="">
+  </picture>
   <div class="about__main">
    <h1 class="about__title title big" id="about-title">Жилой комплекс <br> в историческом центре</h1>
    <span class="icon mouse"></span>
@@ -105,25 +107,25 @@
    <ul class="benefits__list">
     <li class="benefits__list-item">
      <div class="benefits__card">
-      <img class="benefits__card-image" src="imgs/benefits/benefits-1.svg" width="50" height="50" loading="lazy" alt="">
+      <img class="benefits__card-image" src="imgs/benefits/benefits-1.svg" width="50" height="50" loading="lazy" decoding="async" alt="">
       <h3 class="benefits__card-title">Рядом исторические <br> парки и скверы</h3>
      </div>
     </li>
     <li class="benefits__list-item">
      <div class="benefits__card">
-      <img class="benefits__card-image" src="imgs/benefits/benefits-2.svg" width="50" height="50" loading="lazy" alt="">
+      <img class="benefits__card-image" src="imgs/benefits/benefits-2.svg" width="50" height="50" loading="lazy" decoding="async" alt="">
       <h3 class="benefits__card-title">Полностью <br> обустроенный</h3>
      </div>
     </li>
     <li class="benefits__list-item">
      <div class="benefits__card">
-      <img class="benefits__card-image" src="imgs/benefits/benefits-3.svg" width="50" height="50" loading="lazy" alt="">
+      <img class="benefits__card-image" src="imgs/benefits/benefits-3.svg" width="50" height="50" loading="lazy" decoding="async" alt="">
       <h3 class="benefits__card-title">10 фонтанов <br> на территории</h3>
      </div>
     </li>
     <li class="benefits__list-item">
      <div class="benefits__card">
-      <img class="benefits__card-image" src="imgs/benefits/benefits-4.svg" width="50" height="50" loading="lazy" alt="">
+      <img class="benefits__card-image" src="imgs/benefits/benefits-4.svg" width="50" height="50" loading="lazy" decoding="async" alt="">
       <h3 class="benefits__card-title">6 км <br> велодорожек</h3>
      </div>
     </li>
@@ -137,25 +139,25 @@
   <ul class="catalog-preview__list">
    <li class="catalog-preview__list-item">
     <a class="catalog-preview__card" href="#!">
-     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-1.webp" width="540" height="320" loading="lazy" alt="Современный интерьер с чёрными стульями, круглыми столами, бетонным полом и большими окнами, пропускающими естественный свет. На заднем плане видна лестница и растения">
+     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-1.webp" width="540" height="320" loading="lazy" decoding="async" alt="Современный интерьер с чёрными стульями, круглыми столами, бетонным полом и большими окнами, пропускающими естественный свет. На заднем плане видна лестница и растения">
      <h3 class="catalog-preview__card-title">Пентхаус “Loft Олимп”</h3>
     </a>
    </li>
    <li class="catalog-preview__list-item">
     <a class="catalog-preview__card" href="#!">
-     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-2.webp" width="540" height="360" loading="lazy" alt="Два современных белых дивана с цилиндрическими подушками стоят напротив черных круглых журнальных столиков в комнате с большими окнами, кирпичными стенами и деревянным полом">
+     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-2.webp" width="540" height="360" loading="lazy" decoding="async" alt="Два современных белых дивана с цилиндрическими подушками стоят напротив черных круглых журнальных столиков в комнате с большими окнами, кирпичными стенами и деревянным полом">
      <h3 class="catalog-preview__card-title">Апартаменты “Nice Loft”</h3>
     </a>
    </li>
    <li class="catalog-preview__list-item">
     <a class="catalog-preview__card" href="#!">
-     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-3.webp" width="540" height="320" loading="lazy" alt="Уютная гостиная с мягким диваном и стильным столом">
+     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-3.webp" width="540" height="320" loading="lazy" decoding="async" alt="Уютная гостиная с мягким диваном и стильным столом">
      <h3 class="catalog-preview__card-title">Апартаменты “Loft Studio”</h3>
     </a>
    </li>
    <li class="catalog-preview__list-item">
     <a class="catalog-preview__card" href="#!">
-     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-4.webp" width="540" height="320" loading="lazy" alt="Просторная гостиная, в которой расположены диван и стол">
+     <img class="catalog-preview__card-image" src="imgs/catalog-preview/catalog-preview-4.webp" width="540" height="320" loading="lazy" decoding="async" alt="Просторная гостиная, в которой расположены диван и стол">
      <h3 class="catalog-preview__card-title">Loft квартира “Престиж”</h3>
     </a>
    </li>
@@ -164,6 +166,10 @@
 </section>
  <section class="cta" aria-labelledby="cta-title">
  <div class="cta__inner container">
+  <picture>
+   <source media="(width <= 47.9988rem)" srcset="imgs/cta/cta-background-mobile.webp">
+   <img class="cta__background" src="imgs/cta/cta-background.webp" width="1920" height="560" decoding="async" alt="">
+  </picture>
   <div class="cta__info">
    <h2 class="title normal" id="cta-title">Хотите посмотреть?</h2>
    <p class="cta__info-text">
@@ -193,7 +199,7 @@
   <h2 class="visually-hidden" id="preview-title">Видео о компании LoftHouse</h2>
   <div class="custom-video">
    <div class="custom-video__content">
-    <img class="custom-video__preview" src="imgs/preview/preview.webp" width="720" height="650" loading="lazy" alt="">
+    <img class="custom-video__preview" src="imgs/preview/preview.webp" width="720" height="650" loading="lazy" decoding="async" alt="">
     <div class="custom-video__controls">
      <button class="custom-video__button play" data-tippy-content="Включить видео">
       <span class="visually-hidden">Включить видео</span>
@@ -207,7 +213,7 @@
  <section class="map" aria-labelledby="map-title">
  <div class="map__inner container">
   <h2 class="title normal" id="map-title">Район на карте</h2>
-  <img class="map__preview" src="imgs/map/map.webp" width="1110" height="360" loading="lazy" alt="Изображение 'Район на карте'">
+  <img class="map__preview" src="imgs/map/map.webp" width="1110" height="360" loading="lazy" decoding="async" alt="Изображение 'Район на карте'">
  </div>
 </section>
  <section class="feedback" aria-labelledby="feedback-title">
