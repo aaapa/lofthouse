@@ -6,15 +6,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  isolation: isolate;
 
   @include mobile {
     max-width: ptrm(400);
     min-height: ptrm(400);
-  }
-
-  & * {
-    position: relative;
-    z-index: 3 !important;
   }
 
   &__content {
@@ -36,7 +32,6 @@
       position: absolute;
       top: ptrm(0);
       left: ptrm(0);
-      z-index: 2;
       background-color: rgba(36, 43, 51, 0.80);
     }
   }
@@ -57,7 +52,7 @@
     position: absolute;
     top: ptrm(0);
     left: ptrm(0);
-    z-index: 1 !important;
+    z-index: -2;
   }
 
   &__button {
@@ -70,20 +65,22 @@
     &:active {
       scale: $scale;
     }
-  }
 
-  &__play-icon {
-    @include trns;
+    &-icon {
+      @include mobile {
+        width: ptrm(60) !important;
+        height: ptrm(60) !important;
+      }
 
-    @include mobile {
-      width: ptrm(60) !important;
-      height: ptrm(60) !important;
+      &::before {
+        @include trns;
+      }
     }
   }
 
   &__button {
     @include hover {
-      .custom-video__play-icon {
+      .custom-video__button-icon {
         &::before {
           background-color: rgba($color-main, 0.5);
         }
