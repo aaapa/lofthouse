@@ -21,7 +21,7 @@
 
   &.mouse {
     &::before {
-      background-color: $accent-color;
+      background-color: $color-main;
       mask-image: url("icons/mouse.svg");
     }
   }
@@ -87,7 +87,7 @@
     @include square(ptrm(100));
 
     &::before {
-      background-color: $accent-color;
+      background-color: $color-main;
       mask-image: url("icons/play.svg");     
     }
   }

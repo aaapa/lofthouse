@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-
+  content-visibility: auto;
+  
   & * {
     z-index: 2;
   }

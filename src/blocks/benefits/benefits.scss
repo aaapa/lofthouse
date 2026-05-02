@@ -1,11 +1,11 @@
 .benefits {
   $min-heigth: ptrm(420);
-
   width: 100%;
   min-height: $min-heigth;
   display: flex;
   align-items: center;
   justify-content: center;
+  content-visibility: auto;
 
   & * {
     z-index: 2;

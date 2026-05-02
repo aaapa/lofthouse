@@ -85,7 +85,7 @@
     @include hover {
       .custom-video__play-icon {
         &::before {
-          background-color: rgba($accent-color, 0.5);
+          background-color: rgba($color-main, 0.5);
         }
       }
     }

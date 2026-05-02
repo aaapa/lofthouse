@@ -4,7 +4,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
+  content-visibility: auto;
+  
   @include mobile {
     padding-block-end: ptrm(60);
   }
@@ -109,7 +110,7 @@
     }
 
     @include hover {
-      color: $accent-color;
+      color: $color-main;
     }
   }
 }

@@ -12,8 +12,6 @@ $inputHeight: ptrm(50);
     text-align: center;
     font-family: "Raleway-Regular";
     background-color: #5E646A;
-    border: none;
-    outline: none;
     @include trns;
 
     &:focus-visible + .field__placeholder,
@@ -26,7 +24,7 @@ $inputHeight: ptrm(50);
 
     @include hover {
       &:not(:focus-visible) + .field__placeholder {
-        color: $accent-color;
+        color: $color-main;
       }
     }
   }
@@ -38,8 +36,8 @@ $inputHeight: ptrm(50);
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: ptrm(0);
+    left: ptrm(0);
     pointer-events: none;
     font-family: "Raleway-Regular";
     transition: all 0.6s;

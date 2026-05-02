@@ -2,6 +2,7 @@
   width: 100%;
   padding-block: ptrm(55) ptrm(50);
   background-color: #2D343C;
+  content-visibility: auto;
 
   &__inner {
     width: 100%;
@@ -70,7 +71,7 @@
     @include trns;
 
     &.email {
-      color: $accent-color;
+      color: $color-main;
       font-family: "Raleway-Bold";
       font-weight: 700;
 
@@ -80,7 +81,7 @@
     }
 
     @include hover {
-      color: $accent-color;
+      color: $color-main;
     }
 
     &:active {
@@ -115,7 +116,7 @@
     &-link {
       @include hover {
         .footer__socials-link-icon::before {
-          background-color: $accent-color;
+          background-color: $color-main;
         }
       }
     }
