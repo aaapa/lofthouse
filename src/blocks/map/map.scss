@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   content-visibility: auto;
+  contain-intrinsic-size: auto ptrm(666);
 
   @include mobile {
     padding-block-end: ptrm(60);

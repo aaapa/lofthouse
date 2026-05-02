@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   content-visibility: auto;
+  contain-intrinsic-size: auto $min-heigth;
 
   & * {
     z-index: 2;

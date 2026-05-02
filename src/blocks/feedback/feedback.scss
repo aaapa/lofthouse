@@ -1,15 +1,13 @@
 .feedback {
   width: 100%;
-  padding-block-end: ptrm(200);
+  min-height: ptrm(350);
+  padding-block-end: ptrm(60);
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   content-visibility: auto;
-
-  @include tablet {
-    padding-block-end: ptrm(60);
-  }
+  contain-intrinsic-size: auto ptrm(350);
 
   &__inner {
     display: flex;
