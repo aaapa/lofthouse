@@ -1,7 +1,10 @@
 <section class="about" aria-labelledby="about-title">
  <div class="about__inner container">
   <load src="/src/components/header/header.html"/>
-  <img class="about__background" src="imgs/about/about.webp" width="1920" height="840" fetchpriority="high" alt="">
+  <picture>
+   <source media="(width <= 47.9988rem)" srcset="imgs/about/about-background-mobile.webp">
+   <img class="about__background" src="imgs/about/about-background.webp" width="1920" height="840" fetchpriority="high" decoding="async" alt="">
+  </picture>
   <div class="about__main">
    <h1 class="about__title title big" id="about-title">Жилой комплекс <br> в историческом центре</h1>
    <span class="icon mouse"></span>
