@@ -1,0 +1,19 @@
+.button {
+  min-height: ptrm(50);
+  padding: ptrm(15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Raleway-Bold";
+  background-color: $accent-color;
+  @include trns;
+
+  @include hover {
+    background-color: rgba($accent-color, 0.5);
+  }
+
+  &:active {
+    scale: $scale;
+  }
+}

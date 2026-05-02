@@ -1,0 +1,115 @@
+.catalog-preview {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    padding-block-end: ptrm(60);
+  }
+
+  & * {
+    z-index: 2;
+  }
+
+  &__inner {
+    display: flex;
+    gap: ptrm(90);
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    @include mobile {
+      gap: ptrm(40);
+    }
+
+    &::before {
+      content: "III";
+      color: #282F37;
+      font-size: ptrm(400);
+      font-weight: 700;
+      font-family: "PlayfairDisplay-Bold";
+      position: absolute;
+      top: ptrm(-25);
+      left: ptrm(-230);
+      z-index: 1;
+
+      @media (width <= ptrm(1300)) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: ptrm(30);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      display: flex;
+      gap: ptrm(20);
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    min-height: ptrm(320);
+    padding-inline: ptrm(50);
+    padding-block: ptrm(45);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    @include trns;
+
+    &:active {
+      scale: $scale;
+    }
+
+    @include mobile {
+      min-height: ptrm(250);
+      padding: ptrm(30);
+    }
+    
+     &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      top: ptrm(0);
+      left: ptrm(0);
+      z-index: 2;
+      background:
+        linear-gradient(180deg, rgba(36, 43, 51, 0.00) 0%, #242B33 100%)
+    }
+
+    & * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: ptrm(0);
+      left: ptrm(0);
+      z-index: 1;
+    }
+
+    &-title {
+      display: inline-block;
+      @include fluid-text(24, 18);
+      font-family: "Raleway-Regular";
+      @include trns;
+    }
+
+    @include hover {
+      color: $accent-color;
+    }
+  }
+}

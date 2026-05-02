@@ -1,0 +1,50 @@
+.map {
+  width: 100%;
+  padding-block-end: ptrm(180);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    padding-block-end: ptrm(60);
+  }
+
+  & * {
+    z-index: 2;
+  }
+
+  &__inner {
+    display: flex;
+    gap: ptrm(90);
+    flex-direction: column;
+    position: relative;
+
+    @include mobile {
+      gap: ptrm(30);
+      align-items: center;
+    }
+
+    &::before {
+      content: "V";
+      color: #282F37;
+      font-size: ptrm(400);
+      font-weight: 700;
+      font-family: "PlayfairDisplay-Bold";
+      position: absolute;
+      top: ptrm(-25);
+      left: ptrm(-100);
+      z-index: 1;
+
+      @media (width <= ptrm(1300)) {
+        display: none;
+      }
+    }
+  }
+
+  &__preview {
+    width: 100%;
+    height: ptrm(360);
+    object-fit: cover;
+  }
+}

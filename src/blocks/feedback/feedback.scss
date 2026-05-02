@@ -1,0 +1,70 @@
+.feedback {
+  width: 100%;
+  padding-block-end: ptrm(200);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @include tablet {
+    padding-block-end: ptrm(60);
+  }
+
+  &__inner {
+    display: flex;
+    gap: ptrm(40);
+    flex-direction: column;
+
+    @include tablet {
+      gap: ptrm(30);
+      align-items: center;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    gap: ptrm(35);
+    align-items: center;
+
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: ptrm(30);
+    grid-template-columns: repeat(3, ptrm(255));
+
+    @include tablet {
+      width: 100%;
+      max-width: ptrm(300);
+      display: flex;
+      gap: ptrm(20);
+      flex-direction: column;
+    }
+
+    &-text {
+      color: #E7E7E7;
+      font-family: "Raleway-Regular";
+      line-height: 150%;
+      text-align: center;
+
+      @include tablet {
+        max-width: ptrm(300);
+      }
+    }
+  }
+
+  &__input {
+    @include tablet {
+      &:not(:placeholder-shown) + .field__placeholder,
+      &:focus-visible + .field__placeholder,
+      &:-webkit-autofill + .field__placeholder {
+        transform: translateY(ptrm(-20));
+      }
+    }
+  }
+}

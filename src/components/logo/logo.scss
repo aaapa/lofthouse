@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    width: ptrm(135);
+    height: ptrm(65);
+    object-fit: cover;
+  }
+}
