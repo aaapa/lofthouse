@@ -3,11 +3,36 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LoftHouse | главная</title>
+  <meta name="description" content="Проект в портфолио. LoftHouse - это современный жилой комплекс, который предлагает уникальное сочетание комфорта, стиля и функциональности">
+  <meta name="author" content="t.me/rciru">
+  <meta name="theme-color" content="#242B33">
+  <link rel="canonical" href="https://aaapa.github.io/lofthouse/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aaapa.github.io/lofthouse/">
+  <meta property="og:title" content="LoftHouse | Главная">
+  <meta property="og:description" content="Проект в портфолио. LoftHouse - это современный жилой комплекс, который предлагает уникальное сочетание комфорта, стиля и функциональности">
+  <meta property="og:image" content="https://aaapa.github.io/lofthouse/site-preview.png">
+  <meta property="og:site_name" content="LoftHouse">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rciru">
+  <meta name="twitter:title" content="LoftHouse | Главная">
+  <meta name="twitter:description" content="Проект в портфолио. LoftHouse - это современный жилой комплекс, который предлагает уникальное сочетание комфорта, стиля и функциональности">
+  <meta name="twitter:image" content="https://aaapa.github.io/lofthouse/site-preview.png">
+  <link rel="icon" type="image/png" href="/lofthouse/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/lofthouse/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/lofthouse/favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="LoftHouse" />
+  <link rel="manifest" href="/lofthouse/site.webmanifest" />
+  <title>LoftHouse | Главная</title>
    
-   <link rel="stylesheet" crossorigin href="/lofthouse/main.css">
+   <link rel="stylesheet" crossorigin href="main.css">
  </head>
  <body>
+  <noscript class="noscript">
+   <p>Для корректного отображения сайта необходимо включить JavaScript.</p>
+  </noscript>
   <main class="main">
  <section class="about" aria-labelledby="about-title">
  <div class="about__inner container">
@@ -17,7 +42,7 @@
    <img class="logo__image" src="imgs/logo/logo.png" alt="LoftHouse">
    <span class="visually-hidden">На главную</span>
   </a>
-  <div class="header__menu" id="header-menu" data-js-header-menu>
+  <div class="header__menu" id="header-menu" role="menu" data-js-header-menu>
    <div class="header__menu-inner">
     <nav class="header__nav">
      <ul class="header__list">
@@ -40,7 +65,7 @@
     </nav>
    </div>
   </div>
-  <button class="header__menu-button visible-mobile" aria-expanded="false" aria-controls="header-menu" aria-haspopup="menu" data-js-header-menu-button>
+  <button class="header__menu-button visible-tablet" aria-expanded="false" aria-controls="header-menu" aria-haspopup="menu" data-js-header-menu-button>
    <span class="header__menu-icon" data-js-header-menu-icon>
     <span class="header__menu-icon-line"></span>
     <span class="header__menu-icon-line"></span>
@@ -143,13 +168,13 @@
    </p>
   </div>
   <form class="cta__form">
-   <label class="input-wrapper">
-    <input class="input" type="text" placeholder="" name="cta-input-name" required aria-required="true" aria-labelledby="cta-input-name-placeholder">
-    <span class="input__placeholder" id="cta-input-name-placeholder">Ваше имя</span>
+   <label class="field">
+    <input class="cta__input field__input" type="text" placeholder="" name="cta-input-name" required aria-required="true" aria-labelledby="cta-input-name-placeholder">
+    <span class="field__placeholder" id="cta-input-name-placeholder">Ваше имя</span>
    </label>
-   <label class="input-wrapper">
-    <input class="input" type="tel" placeholder="" name="cta-input-tel" required aria-required="true" aria-labelledby="cta-input-tel-placeholder">
-    <span class="input__placeholder" id="cta-input-tel-placeholder">Ваш телефон</span>
+   <label class="field">
+    <input class="cta__input field__input" type="tel" placeholder="" name="cta-input-tel" required aria-required="true" aria-labelledby="cta-input-tel-placeholder">
+    <span class="field__placeholder" id="cta-input-tel-placeholder">Ваш телефон</span>
    </label>
    <span class="cta__form-text">*Мы никому не передаём ваши данные. И не сохраняем ваш номер в базу.</span>
    <button class="button" type="submit">Посмотреть район</button>
@@ -184,13 +209,13 @@
   <div class="feedback__content">
    <span class="feedback__form-text">*Мы никому не передаём ваши данные. И не сохраняем ваш номер в базу.</span>
    <form class="feedback__form">
-    <label class="input-wrapper">
-     <input class="feedback__input input" type="text" placeholder="" name="feedback-input-name" required aria-required="true" aria-labelledby="feedback-input-name-placeholder">
-     <span class="input__placeholder" id="feedback-input-name-placeholder">Ваше имя</span>
+    <label class="field">
+     <input class="feedback__input field__input" type="text" placeholder="" name="feedback-input-name" required aria-required="true" aria-labelledby="feedback-input-name-placeholder">
+     <span class="field__placeholder" id="feedback-input-name-placeholder">Ваше имя</span>
     </label>
-    <label class="input-wrapper">
-     <input class="feedback__input input" type="tel" placeholder="" name="feedback-input-tel" required aria-required="true" aria-labelledby="feedback-input-tel-placeholder">
-     <span class="input__placeholder" id="feedback-input-tel-placeholder">Ваш телефон</span>
+    <label class="field">
+     <input class="feedback__input field__input" type="tel" placeholder="" name="feedback-input-tel" required aria-required="true" aria-labelledby="feedback-input-tel-placeholder">
+     <span class="field__placeholder" id="feedback-input-tel-placeholder">Ваш телефон</span>
     </label>
     <button class="button" type="submit">Посмотреть район</button>   
    </form>
@@ -296,6 +321,6 @@
   </div>
  </div>
 </footer>
- <script type="module" crossorigin src="/lofthouse/main.js"></script>
+ <script type="module" crossorigin src="main.js"></script>
 </body>
 </html>

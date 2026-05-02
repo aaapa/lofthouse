@@ -1,0 +1,21 @@
+{
+  "name": "LoftHouse",
+  "short_name": "LoftHouse",
+  "icons": [
+    {
+      "src": "favicons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#242B33",
+  "background_color": "#242B33",
+  "display": "standalone"
+}

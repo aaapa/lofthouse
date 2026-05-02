@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /api/
+Disallow: /*?
+Disallow: /apple-app-site-association
+Disallow: /.well-known/
+
+Sitemap: https://aaapa.github.io/lofthouse/
