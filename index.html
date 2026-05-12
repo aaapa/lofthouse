@@ -49,19 +49,19 @@
     <nav class="header__nav">
      <ul class="header__list">
       <li class="header__list-item">
-       <a class="header__link" href="#!">О комплексе</a>
+       <a class="header__link" href="#benefits">О комплексе</a>
       </li>
       <li class="header__list-item">
-       <a class="header__link" href="#!">Район</a>
+       <a class="header__link" href="#map">Район</a>
       </li>
       <li class="header__list-item">
-       <a class="header__link" href="#!">Каталог квартир</a>
+       <a class="header__link" href="#catalog-preview">Каталог квартир</a>
       </li>
       <li class="header__list-item">
-       <a class="header__link" href="#!">Ипотека</a>
+       <a class="header__link" href="#feedback" data-anchor-highlight>Ипотека</a>
       </li>
       <li class="header__list-item">
-       <a class="header__link" href="#!">Контакты</a>
+       <a class="header__link" href="#contacts" data-anchor-highlight>Контакты</a>
       </li>
      </ul>
     </nav>
@@ -86,21 +86,24 @@
   </picture>
   <div class="about__main">
    <h1 class="about__title title big" id="about-title">Жилой комплекс <br> в историческом центре</h1>
-   <span class="icon mouse"></span>
+   <a class="about__link" href="#benefits" data-tippy-content="Перейти к преимуществам">
+    <span class="about__link-icon icon mouse"></span>
+    <span class="visually-hidden">Нажмите для перехода к преимуществам</span>
+   </a>
   </div>
   <address class="about__address">
    <div class="about__address-row">
     <span class="icon gps"></span>
-    <span class="about__address-text">Наб. реки Фонтанки 10-15</span>
+    <a class="about__address-link" href="https://yandex.ru/maps/-/CPWibW6G">Наб. реки Фонтанки 10-15</a>
    </div>
    <div class="about__address-row">
     <span class="icon phone"></span>
-    <span class="about__address-text">8 (812) 123-45-67</span>
+    <a class="about__address-link" href="tel:+78121234567">8 (812) 123-45-67</a>
    </div>
   </address>
  </div>
 </section>
- <section class="benefits" aria-labelledby="benefits-title">
+ <section class="benefits" id="benefits" aria-labelledby="benefits-title">
  <div class="benefits__inner container">
   <div class="benefits__list-container">
    <h2 class="visually-hidden" id="benefits-title">Преимущества</h2>
@@ -133,7 +136,7 @@
   </div>
  </div>
 </section>
- <section class="catalog-preview" aria-labelledby="catalog-preview-title">
+ <section class="catalog-preview" id="catalog-preview" aria-labelledby="catalog-preview-title">
  <div class="catalog-preview__inner container">
   <h2 class="title normal" id="catalog-preview-title">Наши квартиры</h2>
   <ul class="catalog-preview__list">
@@ -194,7 +197,7 @@
   </form>
  </div>
 </section>
- <section class="preview" aria-labelledby="preview-title">
+ <section class="preview" id="preview" aria-labelledby="preview-title">
  <div class="preview__inner container">
   <h2 class="visually-hidden" id="preview-title">Видео о компании LoftHouse</h2>
   <div class="custom-video">
@@ -210,13 +213,18 @@
   </div>
  </div>
 </section>
- <section class="map" aria-labelledby="map-title">
+ <section class="map" id="map" aria-labelledby="map-title" data-js-map>
  <div class="map__inner container">
   <h2 class="title normal" id="map-title">Район на карте</h2>
-  <img class="map__preview" src="imgs/map/map.webp" width="1110" height="360" loading="lazy" decoding="async" alt="Изображение 'Район на карте'">
+  <div class="map__view" data-js-map-view>
+   <button class="map__view-overlay" aria-expanded="false" aria-controls="map-view-iframe" data-js-map-view-overlay>
+    <span>Нажмите, чтобы открыть карту</span>
+   </button>
+   <iframe class="map__view-iframe" id="map-view-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abeff2ae23418bf814ae1087d349a2f3397c1b33f09f0281f2ade2dcf941ab5c0&amp;source=constructor" title="Район на карте" width="100%" height="100%" frameborder="0" inert loading="lazy" data-js-map-iframe></iframe>
+  </div>
  </div>
 </section>
- <section class="feedback" aria-labelledby="feedback-title">
+ <section class="feedback" id="feedback" aria-labelledby="feedback-title">
  <div class="feedback__inner container">
   <h2 class="title normal" id="feedback-title">Есть вопросы?</h2>
   <div class="feedback__content">
@@ -247,19 +255,19 @@
     <nav class="footer__nav">
      <ul class="footer__list">
       <li class="footer__list-item">
-       <a class="footer__link" href="#!">О комплексе</a>
+       <a class="footer__link" href="#benefits">О комплексе</a>
       </li>
       <li class="footer__list-item">
-       <a class="footer__link" href="#!">Район</a>
+       <a class="footer__link" href="#map">Район</a>
       </li>
       <li class="footer__list-item">
-       <a class="footer__link" href="#!">Каталог квартир</a>
+       <a class="footer__link" href="#catalog-preview">Каталог квартир</a>
       </li>
       <li class="footer__list-item">
-       <a class="footer__link" href="#!">Ипотека</a>
+       <a class="footer__link" href="#feedback" data-anchor-highlight>Ипотека</a>
       </li>
       <li class="footer__list-item">
-       <a class="footer__link" href="#!">Контакты</a>
+       <a class="footer__link" href="#contacts" data-anchor-highlight>Контакты</a>
       </li>
      </ul>
     </nav>
@@ -267,26 +275,26 @@
      <nav class="footer__nav">
       <ul class="footer__list">
        <li class="footer__list-item">
-        <a class="footer__link" href="#!">Поселение и переезд</a>
+        <a class="footer__link" href="#feedback" data-anchor-highlight>Поселение и переезд</a>
        </li>
        <li class="footer__list-item">
-        <a class="footer__link" href="#!">Сервисные услуги</a>
+        <a class="footer__link" href="#feedback" data-anchor-highlight>Сервисные услуги</a>
        </li>
        <li class="footer__list-item">
-        <a class="footer__link" href="#!">Экологическая устойчивость</a>
+        <a class="footer__link" href="#feedback" data-anchor-highlight>Экологическая устойчивость</a>
        </li>
        <li class="footer__list-item">
-        <a class="footer__link" href="#!">Инвестиционные возможности</a>
+        <a class="footer__link" href="#feedback" data-anchor-highlight>Инвестиционные возможности</a>
        </li>
        <li class="footer__list-item">
-        <a class="footer__link" href="#!">Программа лояльности</a>
+        <a class="footer__link" href="#feedback" data-anchor-highlight>Программа лояльности</a>
        </li>
       </ul>
      </nav>
-     <div class="footer__links-column">
+     <div class="footer__links-column" id="contacts">
       <ul class="footer__list">
        <li class="footer__list-item">
-        <address class="footer__links-text">Адрес: Наб. реки Фонтанки 10-15</address>
+        <address class="footer__links-text">Адрес: <a class="footer__link" href="https://yandex.ru/maps/-/CPWibW6G"> Наб. реки Фонтанки 10-15</a></address>
        </li>
        <li class="footer__list-item">
         <span class="footer__links-text">Телефон:</span> <a class="footer__link" href="tel:+78121234567">8 (812) 123-45-67</a>
