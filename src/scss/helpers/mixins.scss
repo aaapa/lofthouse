@@ -49,6 +49,6 @@
   height: $size;
 }
 
-@mixin trns {
-  transition: all 0.15s ease-in-out 0s;
+@mixin trns($time: 0.15s) {
+  transition: all $time ease-in-out 0s;
 }

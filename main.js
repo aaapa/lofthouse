@@ -22,6 +22,8 @@ import '@/blocks/feedback/feedback.scss';
 
 import '@/components/header/header.js';
 
+import '@/blocks/map/map.js';
+
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 tippy('[data-tippy-content]', {
@@ -30,3 +32,5 @@ tippy('[data-tippy-content]', {
     expanded: false,
   },
 });
+
+import '@/libs/anchor-highlight/anchor-highlight.js';

@@ -19,7 +19,7 @@ class Header {
   };
 
   media = {
-    mobile: 61.9988, // 61.9988rem - 991.98px
+    mobile: 64.0613, // 64.0613rem - 1024.98px
   };
 
   constructor() {
@@ -38,6 +38,28 @@ class Header {
     this.adaptiveMenu();
   };
 
+  adaptiveMenu = () => {
+    if (this.mobileMediaQuery.matches) {
+      if (this.menuElement.classList.contains(this.stateClasses.open)) {
+        this.menuElement.removeAttribute(this.attrs.inert);
+      } else {
+        this.menuElement.setAttribute(this.attrs.inert, '');
+      };
+    } else {
+      this.menuElement.removeAttribute(this.attrs.inert);
+    };
+  };
+
+  menuToggleAttr = () => {
+    if (this.menuIsExpanded === false) {
+      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'true');
+      this.menuIsExpanded = true;
+    } else if (this.menuIsExpanded === true) {
+      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'false');
+      this.menuIsExpanded = false;
+    };
+  };
+
   openMenu = () => {
     this.rootElement.classList.add(this.stateClasses.scrollLock);
 
@@ -49,7 +71,6 @@ class Header {
 
     this.adaptiveMenu();
   };
-
 
   closeMenu = () => {
     this.rootElement.classList.remove(this.stateClasses.scrollLock);
@@ -69,25 +90,14 @@ class Header {
       this.openMenu();
   };
 
-  adaptiveMenu = () => {
+  onMenuClick = event => {
     if (this.mobileMediaQuery.matches) {
-      if (this.menuElement.classList.contains(this.stateClasses.open)) {
-        this.menuElement.removeAttribute(this.attrs.inert);
-      } else {
-          this.menuElement.setAttribute(this.attrs.inert, '');
-      };
-    } else {
-      this.menuElement.removeAttribute(this.attrs.inert);
-    };
-  };
+      const target = event.target.closest('a, button');
 
-  menuToggleAttr = () => {
-    if (this.menuIsExpanded === false) {
-      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'true');
-      this.menuIsExpanded = true;
-    } else if (this.menuIsExpanded === true) {
-      this.menuButtonElement.setAttribute(this.attrs.ariaExpanded, 'false');
-      this.menuIsExpanded = false;
+      if (target) {
+        this.closeMenu();
+        this.menuToggleAttr();
+      };
     };
   };
 
@@ -109,6 +119,7 @@ class Header {
         };
       };
     });
+    this.menuElement.addEventListener('click', this.onMenuClick);
     this.menuButtonElement.addEventListener('click', this.menuToggleAttr);
     this.mobileMediaQuery.addEventListener('change', this.adaptiveMenu);
     window.addEventListener('scroll', () => this.fixedHeader());

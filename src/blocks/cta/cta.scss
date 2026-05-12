@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;
 
-    @include mobile {
+    @include tablet {
       flex-direction: column;
     }
   }
@@ -50,7 +50,7 @@
     gap: ptrm(20);
     flex-direction: column;
 
-    @include mobile {
+    @include tablet {
       align-items: center;
     }
 
@@ -58,7 +58,7 @@
       max-width: ptrm(540);
       line-height: 150%;
 
-      @include mobile {
+      @include tablet {
         text-align: center;
       }
     }
@@ -69,7 +69,7 @@
     gap: ptrm(30);
     grid-template-columns: repeat(2, ptrm(255));
 
-    @include mobile {
+    @include tablet {
       display: flex;
       gap: ptrm(16);
       flex-direction: column;
@@ -82,7 +82,7 @@
   }
 
   &__input {
-    @include mobile {
+    @include tablet {
       &:not(:placeholder-shown) + .field__placeholder,
       &:focus-visible + .field__placeholder,
       &:-webkit-autofill + .field__placeholder {

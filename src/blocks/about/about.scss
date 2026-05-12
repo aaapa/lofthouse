@@ -56,6 +56,29 @@
     }
   }
 
+  &__link {
+    display: inline-block;
+    @include trns;
+
+    &:active {
+      scale: $scale;
+    }
+
+    &-icon {
+      &::before {
+        @include trns;
+      }
+    }
+    
+    @include hover {
+      .about__link-icon {
+        &::before {
+          background-color: #A89A69;
+        }
+      }
+    }
+  }
+
   &__title {
     text-align: center;
   }
@@ -84,6 +107,19 @@
     &-text {
       @include mobile {
         white-space: nowrap;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      @include trns;
+
+      @include hover {
+        color: #AFAAAA;
+      }
+
+      &:active {
+        scale: $scale;
       }
     }
   }

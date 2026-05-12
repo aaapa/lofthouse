@@ -8,6 +8,7 @@
   justify-content: start;
   content-visibility: auto;
   contain-intrinsic-size: auto ptrm(350);
+  scroll-margin-top: ptrm(200);
 
   &__inner {
     display: flex;

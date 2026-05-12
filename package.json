@@ -1,7 +1,7 @@
 {
   "name": "lofthouse",
   "homepage": "https://aaapa.github.io/lofthouse/",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "sass": "^1.99.0",
-    "vite": "^8.0.10"
+    "vite": "^8.0.12"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",

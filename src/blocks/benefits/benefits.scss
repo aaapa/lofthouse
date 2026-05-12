@@ -7,6 +7,7 @@
   justify-content: center;
   content-visibility: auto;
   contain-intrinsic-size: auto $min-heigth;
+  scroll-margin-top: ptrm(150);
 
   & * {
     z-index: 2;

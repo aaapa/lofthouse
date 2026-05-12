@@ -22,7 +22,7 @@
 
 :focus-visible {
   outline: ptrm(3) solid rgb(27 127 204 / 80%);
-  caret-color: rgb(27 127 204 / 80%);
+  caret-color: $color-main;
 }
 
 ::spelling-error {
@@ -33,7 +33,7 @@
 ::selection {
   color: #0F1B24;
   text-decoration: underline;
-  background-color: #FFECA6;
+  background-color: $color-main;
 }
 
 html,

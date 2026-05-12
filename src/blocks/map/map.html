@@ -1,6 +1,11 @@
-<section class="map" aria-labelledby="map-title">
+<section class="map" id="map" aria-labelledby="map-title" data-js-map>
  <div class="map__inner container">
   <h2 class="title normal" id="map-title">Район на карте</h2>
-  <img class="map__preview" src="imgs/map/map.webp" width="1110" height="360" loading="lazy" decoding="async" alt="Изображение 'Район на карте'">
+  <div class="map__view" data-js-map-view>
+   <button class="map__view-overlay" aria-expanded="false" aria-controls="map-view-iframe" data-js-map-view-overlay>
+    <span>Нажмите, чтобы открыть карту</span>
+   </button>
+   <iframe class="map__view-iframe" id="map-view-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Abeff2ae23418bf814ae1087d349a2f3397c1b33f09f0281f2ade2dcf941ab5c0&amp;source=constructor" title="Район на карте" width="100%" height="100%" frameborder="0" inert loading="lazy" data-js-map-iframe></iframe>
+  </div>
  </div>
 </section>
